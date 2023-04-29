@@ -11,7 +11,7 @@ namespace CarLotSimulator
         {
             //TODO
 
-            //Create aclass file called Car
+            //Create file called Car
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
@@ -46,7 +46,7 @@ namespace CarLotSimulator
             vehicle2.Year = 1943;
             vehicle2.EngineNoise = "FlAMBOOSHKA";
             vehicle2.HonkNoise = "RORORORORRO";
-            vehicle2.IsDriveAble = "Yes";
+            vehicle2.IsDriveAble = "False";
 
             var vehicle3 = new Car();
             vehicle3.Make = "Subaru";
@@ -56,19 +56,14 @@ namespace CarLotSimulator
             vehicle3.HonkNoise = "AHHHESHKA";
             vehicle3.IsDriveAble = "Yes";
 
-            List<Car> cars = new List<Car>();
-            var vehicle4 = new Car();
-            vehicle4.Make = "Pontiac";
-            vehicle4.Model = "Grand AM";
-            vehicle4.Year = 2023;
-            cars.Add(vehicle4);
-        
+            vehicle1.MakeEngineNoise(vehicle1.EngineNoise);
+            vehicle1.MakeHonkNoise(vehicle1.HonkNoise);
 
-            foreach (var car in cars)
-            {
-                Console.WriteLine($"{4}, car.Year, car.Make, car.Model");
-            }
+            vehicle2.MakeEngineNoise(vehicle2.EngineNoise);
+            vehicle2.MakeHonkNoise(vehicle2.HonkNoise);
 
+            vehicle3.MakeEngineNoise(vehicle3.EngineNoise);
+            vehicle3.MakeHonkNoise(vehicle3.HonkNoise);
 
         }
     }
